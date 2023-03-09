@@ -85,7 +85,7 @@
                                                     <td><c:out value="${plan.policyName}"> </c:out></td>
                                                     <td><c:out value="${plan.planCompany}"> </c:out></td>
                                                     <td><c:out value="${plan.claimExpiryDate}"> </c:out></td>
-                                                    <td><c:out value="${plan.planAmount}"> </c:out>
+                                                    <td><i class="fa fa-rupee"></i><c:out value="${plan.planAmount}"> </c:out>
                                                         
                                                         <td>
                                                             <!--<a onClick="ajaxViewClaim(<c:out value="${plan.claimId}"> </c:out>)" style="cursor:pointer" class="btn btn-success mr-2">View Details</a>-->
