@@ -20,7 +20,7 @@ import org.apache.struts2.dispatcher.ApplicationMap;
 import org.apache.struts2.interceptor.ApplicationAware;
 
 /**
- *This is Claim model where all the instance variables are declared and CRUD operations are written 
+ *This is Claim model where all the instance variables are declared and CRUD operations are written as well
  * @author user
  */
 public class Claim extends ActionSupport implements ApplicationAware, SessionAware, Serializable {
