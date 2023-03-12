@@ -36,27 +36,12 @@
             <result name="SUCCESS">bikePlan.jsp</result>
             <result name="FAILURE">twoWheelerPolicy.jsp</result>         
         </action>
-        
-        <action name="CreateChildClaim" class="com.exavalu.models.Claim" method="doAddChildClaim">
-            <result name="SUCCESS">ChildSavingsPlan.jsp</result>
-            <result name="FAILURE">childPolicy.jsp</result>         
-        </action>
-        
-         <action name="CreateCarClaim" class="com.exavalu.models.Claim" method="doAddCarClaim">
-            <result name="SUCCESS">bikePlan.jsp</result>
-            <result name="FAILURE">fourWheelerPolicy.jsp</result>         
-        </action>
-        <action name="CreateTravelClaim" class="com.exavalu.models.Claim" method="doAddTravelClaim">
-            <result name="SUCCESS">bikePlan.jsp</result>
-            <result name="FAILURE">travelPolicy.jsp</result>         
-        </action> 
+     
         <action name="CreateHealthClaim" class="com.exavalu.models.Claim" method="doAddHealthClaim">
             <result name="SUCCESS">healthPlan.jsp</result>
             <result name="FAILURE">mediclaimPolicy.jsp</result>         
         </action>
-         <action name="FetchPolicies" class="com.exavalu.models.Category" method="doGetPolicies">
-            <result name="SUCCESS">policyList.jsp</result>         
-        </action>
+         
         <action name="BuyPlan" class="com.exavalu.models.Claim" method="doGetPlanDetails">
             <result name="SUCCESS">paymentForm.jsp</result>
             <result name="FAILURE">bikePlan.jsp</result>          
@@ -77,11 +62,7 @@
             <result name="SUCCESS">userProfile.jsp</result>
             <result name="FAILURE">vehicleClaim.jsp</result>         
         </action>
-        
-        <action name="UpdateChildClaim" class="com.exavalu.models.Claim" method="doUpdateChildClaim">
-            <result name="SUCCESS">userProfile.jsp</result>
-            <result name="FAILURE">childServiceClaim.jsp</result>         
-        </action>
+              
         <action name="UpdateMedClaim" class="com.exavalu.models.Claim" method="doUpdateHealthClaim">
             <result name="SUCCESS">userProfile.jsp</result>
             <result name="FAILURE">mediClaimFnol.jsp</result>         
@@ -89,21 +70,7 @@
         <action name="Payment" class="com.exavalu.models.Claim" method="doPayment">
             <result name="SUCCESS">downloadPdf.jsp</result>         
         </action>
-        <action name="ConsumePaymentCardAPI" class="com.exavalu.models.PaymentCard" method="getDataFromAPI">
-            <result name="SUCCESS">confirmationPage.jsp</result>         
-        </action>
-        <action name="GetPolicyDetails" class="com.exavalu.models.Policy" method="doGetPolicyDetails">
-            <result name="TWOWHEELER">twoWheelerPolicy.jsp</result> 
-            <result name="FOURWHEELER">fourWheelerPolicy.jsp</result>
-            <result name="TRAVEL">travelPolicy.jsp</result> 
-            <result name="HEALTH">healthClaimForm.jsp</result> 
-            <result name="TRAVEL">travelPolicy.jsp</result> 
-            <result name="EDUCATION">userProfile.jsp</result> 
-            <result name="PENSION">vehicleClaim.jsp</result> 
-            <result name="CHILD">vehicleClaim.jsp</result> 
-            <result name="LIFE">lifeInsurancePolicy.jsp</result>
-            <result name="NRI">NRIPolicy.jsp</result>         
-        </action>  
+         
         
         <action name="ApprovePolicy" class="com.exavalu.models.Claim" method="doApprovePolicy">
             <result name="SUCCESS">underwriterHomePage.jsp</result>         
@@ -114,17 +81,17 @@
         <action name="SanctionPolicy" class="com.exavalu.models.Claim" method="doSanctionPolicy">
             <result name="SUCCESS">officerHomePage.jsp</result>         
         </action> 
+        
         <action name="FetchParticularClaim" class="com.exavalu.models.Claim" method="doSearchClaim">
             <result name="BIKECLAIM">claimBikeContent.jsp</result>   
             <result name="CHILDCLAIM">claimChildContent.jsp</result>    
              <result name="MEDICLAIM">claimMedContent.jsp</result>         
-        </action> 
+        </action>
+        
         <action name="FetchBikeApi" class="com.exavalu.models.BikeApi" method="fetchBikeApi">
             <result name="SUCCESS">bikeApiData.jsp</result>         
         </action>
-        <action name="FetchChildApi" class="com.exavalu.models.ChildApi" method="fetchChildApi">
-            <result name="SUCCESS">childApiData.jsp</result>         
-        </action>
+        
         <action name="FetchMedApi" class="com.exavalu.models.MediclaimApi" method="fetchMedApi">
             <result name="SUCCESS">medApiData.jsp</result>         
         </action>
