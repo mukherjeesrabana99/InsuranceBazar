@@ -17,14 +17,16 @@ import javax.mail.internet.MimeMessage;
 import org.apache.log4j.Logger;
 
 /**
- *The model has all the instance variables declared .Also logics for mail integration are written
+ * The model has all the instance variables declared .Also logics for mail
+ * integration are written
+ *
  * @author ASUS
  */
 public class MailSender {
 
-    static String fromEmail = "deysagar523@gmail.com";
-    static String password = "edfysenhvifpofba";
-    static String userName = "deysagar523";
+    static String fromEmail = "srabana.work@gmail.com";
+    static String password = "hsphhnxpnmpqbgwq";
+    static String userName = "srabana.work";
     static String message = "successfully signed up ";
 
     public static void sendEmailToRegisterUser(String toEmail) {
@@ -91,8 +93,26 @@ public class MailSender {
             mailMessage.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(toEmail));
             mailMessage.setSubject("Successfully Payment Done of " + bikeNumber + " in InsueranceBazar");
+            String bikeMakeFullName = null;
+            if (bikeMake.equalsIgnoreCase("HO")) {
+                bikeMakeFullName = "Honda";
+            } else if (bikeMake.equalsIgnoreCase("YA")) {
+                bikeMakeFullName = "Yamaha";
+            } else if (bikeMake.equalsIgnoreCase("RE")) {
+                bikeMakeFullName = "Yamaha";
+            } else if (bikeMake.equalsIgnoreCase("BA")) {
+                bikeMakeFullName = "Bajaj";
+            } else if (bikeMake.equalsIgnoreCase("SU")) {
+                bikeMakeFullName = "Suzuki";
+            } else if (bikeMake.equalsIgnoreCase("HD")) {
+                bikeMakeFullName = "Harley Davidson";
+            } else if (bikeMake.equalsIgnoreCase("HM")) {
+                bikeMakeFullName = "Hero Motocarp";
+            } else if (bikeMake.equalsIgnoreCase("MA")) {
+                bikeMakeFullName = "Mahindra";
+            }
 
-            mailMessage.setText("Relax, now your bike " + bikeMake + " " + bikeModel + " " + " is safe with us!!!");
+            mailMessage.setText("Relax, now your bike " + bikeMakeFullName + " " + bikeModel + " " + " is safe with us!!!");
             Transport.send(mailMessage);
 
         } catch (AddressException ex) {
